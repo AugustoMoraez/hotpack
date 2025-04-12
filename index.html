@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HotPack - Cadastre-se e seja a primeira a vender seus packs</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #ff0057, #ff7e5f);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      position: sticky;
+      text-align: center;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .header .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+    .header .btn-top {
+      background: #ffffff;
+      color: #ff0057;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .header .btn-top:hover {
+      background-color: #ff0057;
+      color: #fff;
+    }
+
+    /* Hero section */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      color: #ff0057;
+    }
+    .hero p {
+      font-size: 1.2em;
+      color: #555;
+      margin-bottom: 40px;
+    }
+    .hero a {
+      background: #ff0057;
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      font-size: 1.2em;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+      box-shadow: 0 3px 10px rgba(255, 0, 87, 0.3);
+    }
+    .hero a:hover {
+      background: #e6004d;
+    }
+
+    /* Features section */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 60px 20px;
+      background-color: #f9f9f9;
+    }
+    .feature {
+      flex: 1 1 250px;
+      max-width: 300px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .feature:hover {
+      transform: translateY(-5px);
+    }
+    .feature h3 {
+      color: #ff0057;
+      margin-bottom: 10px;
+    }
+
+    /* Call to action section */
+    #formulario {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    #formulario h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #ff0057;
+    }
+    #formulario p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+    #formulario input {
+      padding: 10px;
+      font-size: 1em;
+      width: 70%;
+      max-width: 400px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+    #formulario button {
+      background-color: #ff0057;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 8px;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    #formulario button:hover {
+      background-color: #e6004d;
+    }
+
+    /* Footer */
+    footer {
+      background: #f5f5f5;
+      text-align: center;
+      padding: 25px 20px;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    /* Responsividade */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.5em;
+      }
+      .hero p {
+        font-size: 1.1em;
+      }
+      .header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+      }
+      .header .btn-top {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=485328534"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '485328534');
+  </script>
+
+  <!-- Contagem de cliques -->
+  <script>
+    // Variável para contar os cliques
+    let cliques = 0;
+
+    // Função para contar os cliques e enviar para o Google Analytics
+    function contarCliques() {
+      cliques++;
+      console.log('Número de cliques: ' + cliques);
+      gtag('event', 'click', {
+        'event_category': 'Pré-Registro',
+        'event_label': 'Botão Pré-Registro',
+      });
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">🔥 HotPack</div>
+    <a href="#formulario" class="btn-top" onclick="contarCliques()">PRÉ-ALPHA</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Ganhe dinheiro com seus packs</h1>
+    <p>Junte-se à nossa plataforma segura e privativa. Registre-se para ser uma das primeiras a vender seus packs e comece a lucrar.</p>
+    <a href="#formulario" onclick="contarCliques()">PRÉ-REGISTRO</a>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature">
+      <h3>📦 Privacidade total</h3>
+      <p>Envie seus packs com segurança e sem intermediários. Só você decide o que compartilhar.</p>
+    </div>
+    <div class="feature">
+      <h3>💸 Controle seus ganhos</h3>
+      <p>Você define os preços e tem liberdade total para vender o que quiser, quando quiser.</p>
+    </div>
+    <div class="feature">
+      <h3>📱 Suporte dedicado</h3>
+      <p>Contamos com uma equipe pronta para te ajudar a crescer e se destacar na plataforma.</p>
+    </div>
+  </section>
+
+  <!-- Call to Action Form Section -->
+  <section id="formulario">
+    <h2>Cadastre-se para pré-registro</h2>
+    <p>Entre na lista exclusiva para ser uma das primeiras a vender seus packs no HotPack.</p>
+    <form action="https://seuformulario.com" method="POST">
+      <input type="text" name="nome" placeholder="Seu nome" required />
+      <input type="email" name="email" placeholder="Seu email" required />
+      <button type="submit">Quero me registrar!</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 HotPack. Todos os direitos reservados. | +18 | Conteúdo exclusivo para adultos.
+  </footer>
+
+</body>
+</html>
